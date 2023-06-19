@@ -32,5 +32,11 @@ else:
     minResult = B + C
     hourResult = A
 
+# 모범답안: 초단위로 계산하는 것이 좋다.
+a,b = map(int, input().split(" "))
+c = int(input())
+time = a*60 + b + c
+print((time%1440)//60, (time%1440)%60)
+
 print(A, "", B)
 print(hourResult, minResult)
